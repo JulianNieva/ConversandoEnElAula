@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'conversando en aula',
+  appId: 'com.nieva.conversandoaula',
+  appName: 'Conversando En El Aula',
   webDir: 'www',
   server: {
     androidScheme: 'https'

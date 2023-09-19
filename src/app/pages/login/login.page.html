@@ -1,0 +1,57 @@
+<ion-content no-scroll>
+  <div class="ion-text-center imagen">
+    <img src="assets/icons/icon.png">
+  </div>
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-item lines="none">
+          <ion-input type="email" label="Correo Electrónico" labelPlacement="floating" [formControl]="email"></ion-input>
+        </ion-item>
+        <div color="danger" *ngIf="email.errors && (email.dirty || email.touched)">
+          <ion-text color="danger" *ngIf="email.errors['required']">¡El campo no puede estar vacio!</ion-text>
+          <ion-text color="danger" *ngIf="email.errors['email']">¡Debe ingresar un mail válido!</ion-text>
+        </div>
+        <br>
+        <ion-item lines="none">
+          <ion-input type="password" label="Contraseña" labelPlacement="floating" [formControl]="clave"></ion-input>
+        </ion-item>
+        <div color="danger" *ngIf="clave.errors && (clave.dirty || clave.touched)">
+          <ion-text color="danger" *ngIf="clave.errors['required']">¡El campo no puede estar vacio!</ion-text>
+          <ion-text color="danger" *ngIf="clave.errors['minlength']">¡Debe haber al menos 6 caracteres!</ion-text>
+        </div>
+        <br>
+          <ion-button (click)="login()" size="default" expand="block" [disabled]="!isFormValid" fill="clear" id="botonSesion" shape="round">Iniciar Sesión</ion-button>
+      </form> 
+      <br>
+      <div class="linea"></div>
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>
+          Tambien puede seleccionar un Usuario
+        </ion-card-title>
+      </ion-card-header>
+      <ion-grid class="ion-text-center">
+        <ion-row>
+          <ion-col>
+            <ion-toggle labelPlacement="end" id="admin" [disabled]="admin" (ionChange)="CargarForm(0)">Admin</ion-toggle>
+          </ion-col>
+          <ion-col>
+            <ion-toggle labelPlacement="end" id="usuario" [disabled]="usuario" (ionChange)="CargarForm(1)">Usuario</ion-toggle>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-toggle labelPlacement="end" id="invitado" [disabled]="invitado" (ionChange)="CargarForm(2)">Invitado</ion-toggle>
+          </ion-col>
+          <ion-col>
+            <ion-toggle labelPlacement="end" id="ninguno" [disabled]="ninguno" (ionChange)="CargarForm(-1)">Ninguno</ion-toggle>
+          </ion-col>
+          </ion-row> 
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
