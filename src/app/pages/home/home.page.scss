@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+$font : 'Belleza', sans-serif;
+
+ion-content {
+  --background: #81B29A;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.btn-danger {
+  font-family: 'Ruluko', sans-serif;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #fff;
+}
+
+.btn-danger:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.btn-chat-A {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #F4F1DE;
+  border-radius: 20px;
+  border: 6px outset #F2CC8F;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50vh;
+  background-image: url('../../../assets/icons/4-a.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: #F2CC8F;
+    width: 100%;
+    font-family: $font;
+    font-size: 70px;
+    font-weight: bolder;
+    line-height: 14rem;
+    border-radius: 15px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(84, 84, 85), 0 0 0.2em rgb(177, 177, 191);
+  }
+}
+
+.btn-chat-A:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0 0 16px #adff96;
+}
+
+.btn-chat-B {
+  width: 100%;
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3D405B;
+  border-radius: 20px;
+  border: 6px outset #F4F1DE;
+  text-align: center;
+  margin-bottom: 10px;
+  height: 50vh;
+  background-image: url('../../../assets/icons/4-b.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    width: 100%;
+    font-family: $font;
+    font-size: 80px;
+    font-weight: bolder;
+    line-height: 14rem;
+    border-radius: 15px;
+    color: #E07A5F;
+    text-shadow: 1px 1px 2px rgb(2, 2, 2), 0 0 1em rgb(84, 84, 85), 0 0 0.2em rgb(96, 96, 100);
+  }
+
+}
+
+.btn-chat-B:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+  box-shadow: 0 0 16px #adff96;
+}
+
+
+// CONVERSACION 4A  *************************************************************
+.boton-sticker {
+  --background: #000;
+  --border-radius: 50%;
+  --box-shadow: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-sticker {
+  color: #fff;
+  font-size: 32px;
+}
+
+.contenedor-carta-a {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body-a {
+  overflow: hidden;
+  height: 90%;
+  background-image: url('../../../assets/fondos/fondo-a.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header-a {
+  background-color: #F4F1DE;
+  color: #3D405B;
+  font-size: 40px;
+  font-family: $font;
+}
+
+.form-control-a {
+  background: #F4F1DE;
+  color: #fff;
+}
+
+.form-control-a::placeholder {
+  color: rgb(207, 204, 204);
+}
+
+ion-input {
+  font-size: 14px;
+  --padding-top: 20px;
+  --padding-bottom: 19px;
+  --padding-start: 5px;
+}
+
+ion-input::placeholder {
+  color: rgb(207, 204, 204);
+}
+
+.contenedor-input {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-input {
+  display: flex;
+  align-items: center;
+}
+
+.input-text {
+  flex: 1;
+  height: 40px;
+  margin-bottom: 0px;
+}
+
+.btn-enviar-a:active {
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
+
+.contenedor-mensajes {
+  overflow: scroll;
+  padding: 0.3rem;
+  height: 100%;
+}
+
+.button-enviar {
+  --background: #000;
+  --border-radius: 50%;
+  --box-shadow: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-enviar {
+  position: relative;
+  z-index: 2;
+}
+
+.contenedor-mensajes::-webkit-scrollbar {
+  display: none;
+}
+
+.card-footer-a {
+  background: #F4F1DE;
+  ion-item{
+    --background: #3D405B;
+  }
+}
+
+.card-footer-a:active {
+  border: none;
+}
+
+.mensaje-enviado {
+  display: block;
+  float: right;
+  text-align: left;
+  position: relative;
+  background: #005c4b;
+  border-radius: .4em;
+  margin-right: 20px;
+  min-width: 50.1%;
+  color: white;
+}
+
+.mensaje-enviado::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 24px solid transparent;
+  border-left-color: #005c4b;
+  border-right: 0;
+  border-top: 0;
+  margin-top: -12px;
+  margin-right: -24px;
+}
+
+.mensaje-recibido {
+  position: relative;
+  background: #28333a;
+  border-radius: .4em;
+  margin-left: 20px;
+  min-width: 60.1%;
+  display: block;
+  float: left;
+  text-align: left;
+  color: white;
+}
+
+.mensaje-recibido::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 24px solid transparent;
+  border-right-color: #202c33;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -12px;
+  margin-left: -24px;
+}
+
+.email-1 {
+  font-size: 0.7;
+  color: rgb(49, 199, 240);
+  font-family: $font;
+}
+
+.email-2 {
+  font-size: 0.7;
+  color: #E07A5F;
+  font-family: $font;
+}
+
+.fecha {
+  font-size: 0.7rem;
+  color: rgb(235, 229, 229);
+  text-align: right;
+  font-weight: lighter;
+  float: right;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-family: $font;
+}
+
+.view-from-right {
+  animation: viewFromRight 0.5s;
+}
+
+@keyframes viewFromRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// CONVERSACION 4B *************************************************************
+
+.contenedor-carta-b {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body-b {
+  height: 90%;
+  overflow: hidden;
+  background-image: url('../../../assets/fondos/fondo-b.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.card-header-b {
+  background-color: #3D405B;
+  color: white;
+  font-size: 40px;
+}
+
+.form-control-b {
+  background: rgb(29, 28, 28);
+  color: #fff;
+}
+
+.form-control-b::placeholder {
+  color: rgb(207, 204, 204);
+}
+
+.btn-enviar-b {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
+.btn-enviar-b:active {
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
+
+.card-footer-b {
+  background: #3D405B;
+  ion-item{
+    --background:#F4F1DE;
+    color:#3D405B;
+  }
+}
+
+//SPINNER
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.custom-spinner img {
+  animation: rotate-center 1s ease-in-out infinite both;
+  max-width: 200px;
+  height: 200px;
+  opacity: 1;
+}
+
+.custom-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-color: rgba(91, 91, 91, 0.601);
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: center;
+}
+
+.spinnerh1 {
+  font-family: $font;
+  position: absolute;
+  top: 200px;
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
